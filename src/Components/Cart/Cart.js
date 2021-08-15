@@ -8,7 +8,7 @@ const Cart = (props) => {
 	const cartCtx = useContext(CartContext);
 	const showOrderBtn = cartCtx.items.length > 0;
 	const addHandler = (item) => {
-		cartCtx.addItem(item);
+		cartCtx.addItem({ ...item, amount: 1 });
 	};
 	const removeHandler = (id) => {
 		cartCtx.remoteItem(id);
